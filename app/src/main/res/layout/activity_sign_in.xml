@@ -30,6 +30,10 @@
         android:layout_height="wrap_content"
         android:hint="Username"
 
+        android:drawableStart="@drawable/user"
+        android:drawablePadding="10dp"
+        android:drawableTint="#B48394"
+
         android:paddingBottom="10dp"
 
         android:background="@drawable/edittext"
@@ -43,6 +47,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
+        android:drawableStart="@drawable/password"
+        android:drawablePadding="10dp"
+        android:drawableTint="#B38595"
         android:background="@drawable/edittext"
 
 
