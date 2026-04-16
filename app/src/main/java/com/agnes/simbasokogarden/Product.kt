@@ -33,7 +33,7 @@ class ProductAdapter(private val productList: List<Product>) :
         val txtDesc: TextView = itemView.findViewById(R.id.product_description)
         val txtPrice: TextView = itemView.findViewById(R.id.product_cost)
         val imgProduct: ImageView = itemView.findViewById(R.id.product_photo)
-        val btnPurchase: TextView = itemView.findViewById(R.id.purchase)
+        val btnPurchase: Button = itemView.findViewById(R.id.purchase)
     }
     //Access the Layout - Single Item
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
@@ -58,17 +58,17 @@ class ProductAdapter(private val productList: List<Product>) :
             .into(holder.imgProduct)
 
         //Handle Purchase Button Listener
-//        holder.btnPurchase.setOnClickListener {
-//            val context = holder.itemView.context
-//            val intent = android.content.Intent(context, Payments::class.java).apply {
-//                putExtra("product_id", product.product_id)
-//                putExtra("product_name", product.product_name)
-//                putExtra("product_description", product.product_description)
-//                putExtra("product_cost", product.product_cost)
-//                putExtra("product_photo", product.product_photo)
-//            }
-//            context.startActivity(intent)
-//        }
+        holder.btnPurchase.setOnClickListener {
+            val context = holder.itemView.context
+            val intent = android.content.Intent(context, Payments::class.java).apply {
+                putExtra("product_id", product.product_id)
+                putExtra("product_name", product.product_name)
+                putExtra("product_description", product.product_description)
+                putExtra("product_cost", product.product_cost)
+                putExtra("product_photo", imageUrl)
+            }
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int = productList.size

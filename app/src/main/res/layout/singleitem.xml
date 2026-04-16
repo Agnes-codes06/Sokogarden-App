@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="10dp">
 
         <!-- Product Name -->
         <TextView
@@ -30,7 +30,7 @@
         <ImageView
             android:id="@+id/product_photo"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="80dp"
             android:layout_marginTop="8dp"
             android:scaleType="centerCrop"
             android:src="@mipmap/ic_launcher" />
@@ -60,8 +60,12 @@
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:text="PURCHASE NOW"
+            android:paddingStart="13dp"
+            android:textSize="12sp"
+            android:layout_gravity="start"
+            android:paddingEnd="13dp"
             android:layout_marginBottom="20dp"
             android:layout_marginTop="10dp"
             android:id="@+id/purchase"
