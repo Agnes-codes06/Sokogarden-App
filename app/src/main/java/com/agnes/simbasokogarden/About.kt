@@ -36,7 +36,7 @@ class About : AppCompatActivity() {
         tts = TextToSpeech(this) {
 
             if (it == TextToSpeech.SUCCESS) {
-                tts.language = Locale.US
+                tts.language = Locale.GERMAN
             }
         }
 //        set button listener

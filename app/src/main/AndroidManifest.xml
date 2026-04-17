@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SimbaSokogarden">
         <activity
+            android:name=".Speech_to_text"
+            android:exported="false" />
+        <activity
             android:name=".About"
             android:exported="false" />
         <activity

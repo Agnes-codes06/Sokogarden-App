@@ -47,6 +47,14 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        val speechtotext=findViewById<Button>(R.id.speechText)
+        speechtotext.setOnClickListener {
+
+            val speechtotextIntent= Intent(applicationContext, Speech_to_text::class.java)
+
+
+        }
+
         val progressbar=findViewById<ProgressBar>(R.id.progressbar)
         val recyclerView=findViewById<RecyclerView>(R.id.recyclerView)
 
